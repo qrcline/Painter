@@ -145,6 +145,17 @@
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>821</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="scribblePlaceHolder"/>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -152,7 +163,7 @@
      <x>0</x>
      <y>0</y>
      <width>1119</width>
-     <height>24</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

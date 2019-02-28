@@ -19,6 +19,7 @@
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -36,6 +37,8 @@ public:
     QPushButton *redColorButton;
     QPushButton *pushButton;
     QPushButton *pushButton_3;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *scribblePlaceHolder;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -84,10 +87,18 @@ public:
         pushButton_3 = new QPushButton(frame);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setGeometry(QRect(70, 260, 91, 41));
+        verticalLayoutWidget = new QWidget(centralWidget);
+        verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(10, 10, 821, 621));
+        scribblePlaceHolder = new QVBoxLayout(verticalLayoutWidget);
+        scribblePlaceHolder->setSpacing(6);
+        scribblePlaceHolder->setContentsMargins(11, 11, 11, 11);
+        scribblePlaceHolder->setObjectName(QString::fromUtf8("scribblePlaceHolder"));
+        scribblePlaceHolder->setContentsMargins(0, 0, 0, 0);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1119, 24));
+        menuBar->setGeometry(QRect(0, 0, 1119, 20));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
