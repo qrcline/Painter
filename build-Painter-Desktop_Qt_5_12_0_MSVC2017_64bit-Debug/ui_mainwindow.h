@@ -35,8 +35,8 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QPushButton *redColorButton;
-    QPushButton *pushButton;
-    QPushButton *pushButton_3;
+    QPushButton *greenColorButton;
+    QPushButton *blueColorButton;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *scribblePlaceHolder;
     QMenuBar *menuBar;
@@ -70,7 +70,8 @@ public:
         horizontalSlider = new QSlider(frame);
         horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
         horizontalSlider->setGeometry(QRect(29, 90, 181, 31));
-        horizontalSlider->setMaximum(10);
+        horizontalSlider->setMaximum(20);
+        horizontalSlider->setSingleStep(2);
         horizontalSlider->setOrientation(Qt::Horizontal);
         label_2 = new QLabel(frame);
         label_2->setObjectName(QString::fromUtf8("label_2"));
@@ -81,12 +82,12 @@ public:
         redColorButton = new QPushButton(frame);
         redColorButton->setObjectName(QString::fromUtf8("redColorButton"));
         redColorButton->setGeometry(QRect(70, 160, 91, 41));
-        pushButton = new QPushButton(frame);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(70, 210, 91, 41));
-        pushButton_3 = new QPushButton(frame);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(70, 260, 91, 41));
+        greenColorButton = new QPushButton(frame);
+        greenColorButton->setObjectName(QString::fromUtf8("greenColorButton"));
+        greenColorButton->setGeometry(QRect(70, 210, 91, 41));
+        blueColorButton = new QPushButton(frame);
+        blueColorButton->setObjectName(QString::fromUtf8("blueColorButton"));
+        blueColorButton->setGeometry(QRect(70, 260, 91, 41));
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(10, 10, 821, 621));
@@ -118,9 +119,9 @@ public:
         label->setText(QApplication::translate("MainWindow", "Options", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Pen Size", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Pen Color", nullptr));
-        redColorButton->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_3->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        redColorButton->setText(QApplication::translate("MainWindow", "Red", nullptr));
+        greenColorButton->setText(QApplication::translate("MainWindow", "Green", nullptr));
+        blueColorButton->setText(QApplication::translate("MainWindow", "Blue", nullptr));
     } // retranslateUi
 
 };

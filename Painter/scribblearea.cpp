@@ -15,6 +15,29 @@ ScribbleArea::ScribbleArea(QWidget *parent) : QWidget(parent)
 
 }
 
+void ScribbleArea::setPenSize(int size)
+{
+    myPenWidth=size;
+}
+
+void ScribbleArea::setPenColor(QColor penColor)
+{
+    myPenColor=penColor;
+}
+
+void ScribbleArea::setPenStyle(bool style)
+{
+    penStyle=style;
+}
+
+void ScribbleArea::setPenText(QString text)
+{
+    penText=text;
+
+}
+
+
+
 void ScribbleArea::mousePressEvent(QMouseEvent *event)
 {
     if(event->button()==Qt::LeftButton)

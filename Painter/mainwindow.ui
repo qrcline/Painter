@@ -73,7 +73,10 @@
       </rect>
      </property>
      <property name="maximum">
-      <number>10</number>
+      <number>20</number>
+     </property>
+     <property name="singleStep">
+      <number>2</number>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -115,10 +118,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>Red</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="greenColorButton">
      <property name="geometry">
       <rect>
        <x>70</x>
@@ -128,10 +131,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>Green</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="blueColorButton">
      <property name="geometry">
       <rect>
        <x>70</x>
@@ -141,7 +144,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>Blue</string>
      </property>
     </widget>
    </widget>

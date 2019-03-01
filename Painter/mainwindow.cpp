@@ -15,3 +15,25 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_horizontalSlider_valueChanged(int value)
+{
+    scribbleArea->setPenSize(value);
+}
+
+void MainWindow::on_redColorButton_clicked()
+{
+    scribbleArea->setPenColor(Qt::red);
+}
+
+
+
+void MainWindow::on_greenColorButton_clicked()
+{
+    scribbleArea->setPenColor(Qt::green);
+}
+
+void MainWindow::on_blueColorButton_clicked()
+{
+    scribbleArea->setPenColor(Qt::blue);
+}

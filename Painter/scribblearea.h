@@ -13,6 +13,10 @@ signals:
 
 public slots:
 
+    void setPenSize(int size);
+    void setPenColor(QColor penColor);
+    void setPenStyle(bool style);
+    void setPenText(QString text);
     // QWidget interface
 protected:
     void mousePressEvent(QMouseEvent *event);
@@ -31,6 +35,9 @@ private:
     bool scribbling;
     int myPenWidth;
     QColor myPenColor;
+    bool penStyle;
+    QString penText;
+
 
     QPoint lastPoint; //the last position of the mouse
 
