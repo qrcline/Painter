@@ -26,8 +26,6 @@ void MainWindow::on_redColorButton_clicked()
     scribbleArea->setPenColor(Qt::red);
 }
 
-
-
 void MainWindow::on_greenColorButton_clicked()
 {
     scribbleArea->setPenColor(Qt::green);
@@ -36,4 +34,19 @@ void MainWindow::on_greenColorButton_clicked()
 void MainWindow::on_blueColorButton_clicked()
 {
     scribbleArea->setPenColor(Qt::blue);
+}
+
+void MainWindow::on_hiEnglish_clicked()
+{
+    scribbleArea->setPenText("Hi!");
+}
+
+void MainWindow::on_hiFrench_clicked()
+{
+    scribbleArea->setPenText("Salut!");
+}
+
+void MainWindow::on_biBul_clicked()
+{
+    scribbleArea->setPenText("здрасти!");
 }

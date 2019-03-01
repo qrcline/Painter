@@ -147,6 +147,73 @@
       <string>Blue</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>330</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Text </string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="biBul">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>460</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Sitka Banner</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>здрасти!</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hiEnglish">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>360</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Code Pro Light</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Hi!</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hiFrench">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>410</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Papyrus</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>Salut!</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">

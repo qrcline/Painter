@@ -37,6 +37,10 @@ public:
     QPushButton *redColorButton;
     QPushButton *greenColorButton;
     QPushButton *blueColorButton;
+    QLabel *label_4;
+    QPushButton *biBul;
+    QPushButton *hiEnglish;
+    QPushButton *hiFrench;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *scribblePlaceHolder;
     QMenuBar *menuBar;
@@ -88,6 +92,27 @@ public:
         blueColorButton = new QPushButton(frame);
         blueColorButton->setObjectName(QString::fromUtf8("blueColorButton"));
         blueColorButton->setGeometry(QRect(70, 260, 91, 41));
+        label_4 = new QLabel(frame);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(20, 330, 61, 16));
+        biBul = new QPushButton(frame);
+        biBul->setObjectName(QString::fromUtf8("biBul"));
+        biBul->setGeometry(QRect(70, 460, 91, 41));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Sitka Banner"));
+        biBul->setFont(font1);
+        hiEnglish = new QPushButton(frame);
+        hiEnglish->setObjectName(QString::fromUtf8("hiEnglish"));
+        hiEnglish->setGeometry(QRect(70, 360, 91, 41));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Source Code Pro Light"));
+        hiEnglish->setFont(font2);
+        hiFrench = new QPushButton(frame);
+        hiFrench->setObjectName(QString::fromUtf8("hiFrench"));
+        hiFrench->setGeometry(QRect(70, 410, 91, 41));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Papyrus"));
+        hiFrench->setFont(font3);
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(10, 10, 821, 621));
@@ -122,6 +147,10 @@ public:
         redColorButton->setText(QApplication::translate("MainWindow", "Red", nullptr));
         greenColorButton->setText(QApplication::translate("MainWindow", "Green", nullptr));
         blueColorButton->setText(QApplication::translate("MainWindow", "Blue", nullptr));
+        label_4->setText(QApplication::translate("MainWindow", "Text ", nullptr));
+        biBul->setText(QApplication::translate("MainWindow", "\320\267\320\264\321\200\320\260\321\201\321\202\320\270!", nullptr));
+        hiEnglish->setText(QApplication::translate("MainWindow", "Hi!", nullptr));
+        hiFrench->setText(QApplication::translate("MainWindow", "Salut!", nullptr));
     } // retranslateUi
 
 };

@@ -28,6 +28,12 @@ private slots:
 
     void on_blueColorButton_clicked();
 
+    void on_hiEnglish_clicked();
+
+    void on_hiFrench_clicked();
+
+    void on_biBul_clicked();
+
 private:
     Ui::MainWindow *ui;
     ScribbleArea *scribbleArea;

@@ -114,7 +114,7 @@ void ScribbleArea::drawText(const QPoint &at)
     QPainter painter(&image);
     QFont serifFont("Times",15,QFont::Bold);
     painter.setFont(serifFont);
-    painter.drawText(at,"hello");
+    painter.drawText(at,penText);
     update();
 
 }
