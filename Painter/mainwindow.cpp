@@ -37,16 +37,23 @@ void MainWindow::on_blueColorButton_clicked()
 }
 
 void MainWindow::on_hiEnglish_clicked()
-{
+{    QFont font("Sitka",15);
+     scribbleArea->setPenFont(font);
     scribbleArea->setPenText("Hi!");
+
+
 }
 
 void MainWindow::on_hiFrench_clicked()
 {
     scribbleArea->setPenText("Salut!");
+    QFont font("Papyrus",20);
+    scribbleArea->setPenFont(font);
 }
 
 void MainWindow::on_biBul_clicked()
 {
     scribbleArea->setPenText("здрасти!");
+    QFont font("Sitka Banner",10);
+    scribbleArea->setPenFont(font);
 }

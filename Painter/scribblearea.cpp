@@ -9,8 +9,10 @@ ScribbleArea::ScribbleArea(QWidget *parent) : QWidget(parent)
 
     scribbling=false;
     myPenColor=Qt::blue;
-    myPenWidth=2;
-
+    myPenWidth=1;
+    penText="Hi!";
+    //QFont serifFont("Times",15,QFont::Bold);
+   // penFont=serifFont;
     resetImage();
 
 }
@@ -25,9 +27,11 @@ void ScribbleArea::setPenColor(QColor penColor)
     myPenColor=penColor;
 }
 
-void ScribbleArea::setPenStyle(bool style)
+void ScribbleArea::setPenFont(QFont style)
 {
-    penStyle=style;
+   penFont=style;
+   update();
+
 }
 
 void ScribbleArea::setPenText(QString text)
@@ -44,7 +48,7 @@ void ScribbleArea::mousePressEvent(QMouseEvent *event)
     {
         lastPoint=event->pos();
         scribbling=true;
-        std::cout<<"Mouse Press"<<std::endl;
+        //std::cout<<"Mouse Press"<<std::endl;
     }
 
     if(event->button()==Qt::RightButton)
@@ -60,7 +64,7 @@ void ScribbleArea::mouseReleaseEvent(QMouseEvent *event)
     {
         drawLineTo(event->pos());
         scribbling=false;
-        std::cout<<"Mouse Release"<<std::endl;
+       // std::cout<<"Mouse Release"<<std::endl;
     }
 }
 
@@ -112,8 +116,9 @@ void ScribbleArea::drawLineTo(const QPoint &endPoint)
 void ScribbleArea::drawText(const QPoint &at)
 {
     QPainter painter(&image);
-    QFont serifFont("Times",15,QFont::Bold);
-    painter.setFont(serifFont);
+    painter.setFont(penFont);
+    QString temp= penFont.toString();
+    std::cout<<temp.toStdString()<<std::endl;
     painter.drawText(at,penText);
     update();
 

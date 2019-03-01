@@ -15,7 +15,7 @@ public slots:
 
     void setPenSize(int size);
     void setPenColor(QColor penColor);
-    void setPenStyle(bool style);
+    void setPenFont(QFont style);
     void setPenText(QString text);
     // QWidget interface
 protected:
@@ -37,6 +37,7 @@ private:
     QColor myPenColor;
     bool penStyle;
     QString penText;
+    QFont penFont;
 
 
     QPoint lastPoint; //the last position of the mouse

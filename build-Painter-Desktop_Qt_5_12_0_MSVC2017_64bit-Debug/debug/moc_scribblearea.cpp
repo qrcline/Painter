@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ScribbleArea_t {
     QByteArrayData data[10];
-    char stringdata0[85];
+    char stringdata0[84];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,14 +37,14 @@ QT_MOC_LITERAL(2, 24, 0), // ""
 QT_MOC_LITERAL(3, 25, 4), // "size"
 QT_MOC_LITERAL(4, 30, 11), // "setPenColor"
 QT_MOC_LITERAL(5, 42, 8), // "penColor"
-QT_MOC_LITERAL(6, 51, 11), // "setPenStyle"
-QT_MOC_LITERAL(7, 63, 5), // "style"
-QT_MOC_LITERAL(8, 69, 10), // "setPenText"
-QT_MOC_LITERAL(9, 80, 4) // "text"
+QT_MOC_LITERAL(6, 51, 10), // "setPenFont"
+QT_MOC_LITERAL(7, 62, 5), // "style"
+QT_MOC_LITERAL(8, 68, 10), // "setPenText"
+QT_MOC_LITERAL(9, 79, 4) // "text"
 
     },
     "ScribbleArea\0setPenSize\0\0size\0setPenColor\0"
-    "penColor\0setPenStyle\0style\0setPenText\0"
+    "penColor\0setPenFont\0style\0setPenText\0"
     "text"
 };
 #undef QT_MOC_LITERAL
@@ -71,7 +71,7 @@ static const uint qt_meta_data_ScribbleArea[] = {
  // slots: parameters
     QMetaType::Void, QMetaType::Int,    3,
     QMetaType::Void, QMetaType::QColor,    5,
-    QMetaType::Void, QMetaType::Bool,    7,
+    QMetaType::Void, QMetaType::QFont,    7,
     QMetaType::Void, QMetaType::QString,    9,
 
        0        // eod
@@ -85,7 +85,7 @@ void ScribbleArea::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         switch (_id) {
         case 0: _t->setPenSize((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 1: _t->setPenColor((*reinterpret_cast< QColor(*)>(_a[1]))); break;
-        case 2: _t->setPenStyle((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 2: _t->setPenFont((*reinterpret_cast< QFont(*)>(_a[1]))); break;
         case 3: _t->setPenText((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }

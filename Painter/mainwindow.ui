@@ -172,6 +172,7 @@
      <property name="font">
       <font>
        <family>Sitka Banner</family>
+       <pointsize>10</pointsize>
       </font>
      </property>
      <property name="text">
@@ -189,7 +190,8 @@
      </property>
      <property name="font">
       <font>
-       <family>Source Code Pro Light</family>
+       <family>Sitka</family>
+       <pointsize>15</pointsize>
       </font>
      </property>
      <property name="text">
@@ -208,6 +210,7 @@
      <property name="font">
       <font>
        <family>Papyrus</family>
+       <pointsize>20</pointsize>
       </font>
      </property>
      <property name="text">
