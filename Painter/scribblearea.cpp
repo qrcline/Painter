@@ -1,5 +1,6 @@
 #include <QImage>
 #include <QtWidgets>
+#include <iostream>
 #include "scribblearea.h"
 
 ScribbleArea::ScribbleArea(QWidget *parent) : QWidget(parent)
@@ -16,17 +17,37 @@ ScribbleArea::ScribbleArea(QWidget *parent) : QWidget(parent)
 
 void ScribbleArea::mousePressEvent(QMouseEvent *event)
 {
+    if(event->button()==Qt::LeftButton)
+    {
+        lastPoint=event->pos();
+        scribbling=true;
+        std::cout<<"Mouse Press"<<std::endl;
+    }
+
+    if(event->button()==Qt::RightButton)
+    {
+        drawText(event->pos());
+    }
 
 }
 
 void ScribbleArea::mouseReleaseEvent(QMouseEvent *event)
 {
-
+    if(event->button()==Qt::LeftButton &&scribbling)
+    {
+        drawLineTo(event->pos());
+        scribbling=false;
+        std::cout<<"Mouse Release"<<std::endl;
+    }
 }
 
 void ScribbleArea::mouseMoveEvent(QMouseEvent *event)
 {
-
+    if(event->buttons()& Qt::LeftButton && scribbling)
+    {
+        drawLineTo(event->pos());
+        std::cout<<"Mouse Move"<<std::endl;
+    }
 }
 
 void ScribbleArea::paintEvent(QPaintEvent *event)
@@ -55,10 +76,22 @@ void ScribbleArea::resetImage()
 
 void ScribbleArea::drawLineTo(const QPoint &endPoint)
 {
-
+    QPainter painter(&image);
+    painter.setPen(QPen(myPenColor,myPenWidth,
+                   Qt::SolidLine,
+                   Qt::RoundCap,
+                   Qt::RoundJoin));
+    painter.drawLine(lastPoint,endPoint);
+    update();
+    lastPoint=endPoint;
 }
 
 void ScribbleArea::drawText(const QPoint &at)
 {
+    QPainter painter(&image);
+    QFont serifFont("Times",15,QFont::Bold);
+    painter.setFont(serifFont);
+    painter.drawText(at,"hello");
+    update();
 
 }
