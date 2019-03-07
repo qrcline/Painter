@@ -73,7 +73,7 @@ void ScribbleArea::mouseMoveEvent(QMouseEvent *event)
     if(event->buttons()& Qt::LeftButton && scribbling)
     {
         drawLineTo(event->pos());
-        std::cout<<"Mouse Move"<<std::endl;
+        //std::cout<<"Mouse Move"<<std::endl;
     }
 }
 

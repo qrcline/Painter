@@ -37,9 +37,9 @@ void MainWindow::on_blueColorButton_clicked()
 }
 
 void MainWindow::on_hiEnglish_clicked()
-{    QFont font("Sitka",15);
+{    QFont font("Segoe UI Emoji",15);
      scribbleArea->setPenFont(font);
-    scribbleArea->setPenText("Hi!");
+    scribbleArea->setPenText("😎");
 
 
 }
