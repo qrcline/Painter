@@ -54,6 +54,8 @@ public:
     QPushButton *Emoji6;
     QPushButton *Emoji8;
     QLabel *mousePicture;
+    QLabel *smallCircle;
+    QLabel *largeCircle;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *scribblePlaceHolder;
     QMenuBar *menuBar;
@@ -67,15 +69,16 @@ public:
         MainWindow->resize(1119, 703);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        centralWidget->setStyleSheet(QString::fromUtf8("background-color:white;"));
+        centralWidget->setStyleSheet(QString::fromUtf8("background-color:blue;"));
         frame = new QFrame(centralWidget);
         frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(850, 20, 261, 601));
+        frame->setGeometry(QRect(850, 10, 261, 621));
+        frame->setStyleSheet(QString::fromUtf8("background-color:white;"));
         frame->setFrameShape(QFrame::Box);
         frame->setFrameShadow(QFrame::Raised);
         horizontalSlider = new QSlider(frame);
         horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
-        horizontalSlider->setGeometry(QRect(30, 160, 181, 31));
+        horizontalSlider->setGeometry(QRect(40, 160, 181, 31));
         horizontalSlider->setMaximum(20);
         horizontalSlider->setSingleStep(2);
         horizontalSlider->setOrientation(Qt::Horizontal);
@@ -372,6 +375,12 @@ public:
         mousePicture->setObjectName(QString::fromUtf8("mousePicture"));
         mousePicture->setGeometry(QRect(60, 10, 151, 161));
         mousePicture->setStyleSheet(QString::fromUtf8("background-color: rgba(0,0,0,0%);"));
+        smallCircle = new QLabel(frame);
+        smallCircle->setObjectName(QString::fromUtf8("smallCircle"));
+        smallCircle->setGeometry(QRect(10, 160, 21, 21));
+        largeCircle = new QLabel(frame);
+        largeCircle->setObjectName(QString::fromUtf8("largeCircle"));
+        largeCircle->setGeometry(QRect(220, 160, 31, 31));
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(10, 10, 821, 621));
@@ -419,6 +428,8 @@ public:
         Emoji6->setText(QApplication::translate("MainWindow", "\360\237\230\215", nullptr));
         Emoji8->setText(QApplication::translate("MainWindow", "\360\237\230\212", nullptr));
         mousePicture->setText(QString());
+        smallCircle->setText(QString());
+        largeCircle->setText(QString());
     } // retranslateUi
 
 };

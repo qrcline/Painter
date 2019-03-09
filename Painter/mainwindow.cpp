@@ -10,12 +10,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->scribblePlaceHolder->addWidget(scribbleArea); //Addding the widget in the placeholder area
 
-    QString steakFilename =":/mouse.png";
-    if(mouseImage.load(steakFilename))
+    QString mouseFilename =":/mouse.png";
+    if(mouseImage.load(mouseFilename))
        {
            mouseImage=mouseImage.scaled(ui->mousePicture->size(),Qt::KeepAspectRatioByExpanding);
        }
     ui->mousePicture->setPixmap(mouseImage);
+
+    QString circleFileName =":/Black_Circle.jpg";
+    if(circleImageSmall.load(circleFileName))
+       {
+           circleImageSmall=circleImageSmall.scaled(ui->smallCircle->size(),Qt::KeepAspectRatioByExpanding);
+       }
+    ui->smallCircle->setPixmap(circleImageSmall);
+    if(circleImageLarge.load(circleFileName))
+       {
+           circleImageLarge=circleImageLarge.scaled(ui->largeCircle->size(),Qt::KeepAspectRatioByExpanding);
+       }
+    ui->largeCircle->setPixmap(circleImageLarge);
 
 }
 

@@ -62,6 +62,8 @@ private:
     Ui::MainWindow *ui;
     ScribbleArea *scribbleArea;
     QPixmap mouseImage;
+     QPixmap circleImageSmall;
+     QPixmap circleImageLarge;
 };
 
 #endif // MAINWINDOW_H

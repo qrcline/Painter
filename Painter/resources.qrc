@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>C:/Users/quint/Google Drive/School/SPU/2018-2019/Winter/CSC 3220_AppsProgramming/mouse.png</file>
         <file>mouse.png</file>
+        <file>Black_Circle.jpg</file>
     </qresource>
 </RCC>

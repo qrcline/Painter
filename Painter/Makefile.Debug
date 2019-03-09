@@ -153,6 +153,7 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_resources.cpp
 debug\qrc_resources.cpp: resources.qrc \
 		C:\Qt\5.12.0\msvc2017_64\bin\rcc.exe \
+		Black_Circle.jpg \
 		mouse.png \
 		"C:\Users\quint\Google Drive\School\SPU\2018-2019\Winter\CSC 3220_AppsProgramming\mouse.png"
 	C:\Qt\5.12.0\msvc2017_64\bin\rcc.exe -name resources resources.qrc -o debug\qrc_resources.cpp
@@ -636,7 +637,40 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		C:\Qt\5.12.0\msvc2017_64\include\QtGui\qicon.h \
 		scribblearea.h \
 		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QWidget \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtCore\QVariant \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QApplication \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QFrame \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QGridLayout \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QLabel \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qmenubar.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qmenu.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QSlider \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QStatusBar \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QToolBar \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\qtoolbar.h \
+		C:\Qt\5.12.0\msvc2017_64\include\QtWidgets\QVBoxLayout
 
 debug\scribblearea.obj: scribblearea.cpp C:\Qt\5.12.0\msvc2017_64\include\QtGui\QImage \
 		C:\Qt\5.12.0\msvc2017_64\include\QtGui\qimage.h \
