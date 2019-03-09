@@ -30,22 +30,19 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QFrame *frame;
-    QLabel *label;
-    QFrame *line;
     QSlider *horizontalSlider;
-    QLabel *label_2;
     QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QPushButton *redColorButton;
-    QPushButton *redColorButton_2;
-    QPushButton *redColorButton_3;
+    QPushButton *cyanButton;
+    QPushButton *blackButton;
     QPushButton *greenColorButton;
-    QPushButton *greenColorButton_2;
-    QPushButton *greenColorButton_3;
+    QPushButton *magentaButton;
+    QPushButton *pinkButton;
     QPushButton *blueColorButton;
-    QPushButton *blueColorButton_2;
-    QPushButton *blueColorButton_3;
-    QWidget *widget;
+    QPushButton *yellowButton;
+    QPushButton *orangeButton;
+    QWidget *layoutWidget1;
     QGridLayout *gridLayout_2;
     QPushButton *Emoji3;
     QPushButton *Emoji7;
@@ -56,6 +53,7 @@ public:
     QPushButton *Emoji5;
     QPushButton *Emoji6;
     QPushButton *Emoji8;
+    QLabel *mousePicture;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *scribblePlaceHolder;
     QMenuBar *menuBar;
@@ -74,30 +72,15 @@ public:
         frame->setGeometry(QRect(850, 20, 261, 601));
         frame->setFrameShape(QFrame::Box);
         frame->setFrameShadow(QFrame::Raised);
-        label = new QLabel(frame);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(91, 10, 81, 31));
-        QFont font;
-        font.setPointSize(11);
-        label->setFont(font);
-        label->setAlignment(Qt::AlignCenter);
-        line = new QFrame(frame);
-        line->setObjectName(QString::fromUtf8("line"));
-        line->setGeometry(QRect(10, 40, 241, 20));
-        line->setFrameShape(QFrame::HLine);
-        line->setFrameShadow(QFrame::Sunken);
         horizontalSlider = new QSlider(frame);
         horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
-        horizontalSlider->setGeometry(QRect(29, 90, 181, 31));
+        horizontalSlider->setGeometry(QRect(30, 160, 181, 31));
         horizontalSlider->setMaximum(20);
         horizontalSlider->setSingleStep(2);
         horizontalSlider->setOrientation(Qt::Horizontal);
-        label_2 = new QLabel(frame);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(20, 70, 52, 15));
         layoutWidget = new QWidget(frame);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(30, 160, 181, 161));
+        layoutWidget->setGeometry(QRect(30, 200, 191, 171));
         gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
@@ -117,9 +100,9 @@ public:
 
         gridLayout->addWidget(redColorButton, 0, 0, 1, 1);
 
-        redColorButton_2 = new QPushButton(layoutWidget);
-        redColorButton_2->setObjectName(QString::fromUtf8("redColorButton_2"));
-        redColorButton_2->setStyleSheet(QString::fromUtf8("background-color: cyan;\n"
+        cyanButton = new QPushButton(layoutWidget);
+        cyanButton->setObjectName(QString::fromUtf8("cyanButton"));
+        cyanButton->setStyleSheet(QString::fromUtf8("background-color: cyan;\n"
 " border-style: solid;\n"
 " border-width:1px;\n"
 " border-radius:20px;\n"
@@ -129,11 +112,11 @@ public:
 " min-width:40px;\n"
 " min-height:40px;"));
 
-        gridLayout->addWidget(redColorButton_2, 0, 1, 1, 1);
+        gridLayout->addWidget(cyanButton, 0, 1, 1, 1);
 
-        redColorButton_3 = new QPushButton(layoutWidget);
-        redColorButton_3->setObjectName(QString::fromUtf8("redColorButton_3"));
-        redColorButton_3->setStyleSheet(QString::fromUtf8("background-color: black;\n"
+        blackButton = new QPushButton(layoutWidget);
+        blackButton->setObjectName(QString::fromUtf8("blackButton"));
+        blackButton->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 " border-style: solid;\n"
 " border-width:1px;\n"
 " border-radius:20px;\n"
@@ -143,7 +126,7 @@ public:
 " min-width:40px;\n"
 " min-height:40px;"));
 
-        gridLayout->addWidget(redColorButton_3, 0, 2, 1, 1);
+        gridLayout->addWidget(blackButton, 0, 2, 1, 1);
 
         greenColorButton = new QPushButton(layoutWidget);
         greenColorButton->setObjectName(QString::fromUtf8("greenColorButton"));
@@ -159,9 +142,9 @@ public:
 
         gridLayout->addWidget(greenColorButton, 1, 0, 1, 1);
 
-        greenColorButton_2 = new QPushButton(layoutWidget);
-        greenColorButton_2->setObjectName(QString::fromUtf8("greenColorButton_2"));
-        greenColorButton_2->setStyleSheet(QString::fromUtf8("background-color: magenta;\n"
+        magentaButton = new QPushButton(layoutWidget);
+        magentaButton->setObjectName(QString::fromUtf8("magentaButton"));
+        magentaButton->setStyleSheet(QString::fromUtf8("background-color: magenta;\n"
 "border-color: magenta;\n"
 " border-style: solid;\n"
 " border-width:1px;\n"
@@ -171,12 +154,12 @@ public:
 " min-width:40px;\n"
 " min-height:40px;"));
 
-        gridLayout->addWidget(greenColorButton_2, 1, 1, 1, 1);
+        gridLayout->addWidget(magentaButton, 1, 1, 1, 1);
 
-        greenColorButton_3 = new QPushButton(layoutWidget);
-        greenColorButton_3->setObjectName(QString::fromUtf8("greenColorButton_3"));
-        greenColorButton_3->setStyleSheet(QString::fromUtf8("background-color: pink;\n"
-"border-color: green;\n"
+        pinkButton = new QPushButton(layoutWidget);
+        pinkButton->setObjectName(QString::fromUtf8("pinkButton"));
+        pinkButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255,20,147);\n"
+"border-color: rgb(255,20,147);\n"
 " border-style: solid;\n"
 " border-width:1px;\n"
 " border-radius:20px;\n"
@@ -185,7 +168,7 @@ public:
 " min-width:40px;\n"
 " min-height:40px;"));
 
-        gridLayout->addWidget(greenColorButton_3, 1, 2, 1, 1);
+        gridLayout->addWidget(pinkButton, 1, 2, 1, 1);
 
         blueColorButton = new QPushButton(layoutWidget);
         blueColorButton->setObjectName(QString::fromUtf8("blueColorButton"));
@@ -201,9 +184,9 @@ public:
 
         gridLayout->addWidget(blueColorButton, 2, 0, 1, 1);
 
-        blueColorButton_2 = new QPushButton(layoutWidget);
-        blueColorButton_2->setObjectName(QString::fromUtf8("blueColorButton_2"));
-        blueColorButton_2->setStyleSheet(QString::fromUtf8("background-color: yellow;\n"
+        yellowButton = new QPushButton(layoutWidget);
+        yellowButton->setObjectName(QString::fromUtf8("yellowButton"));
+        yellowButton->setStyleSheet(QString::fromUtf8("background-color: yellow;\n"
 "border-color: yellow;\n"
 " border-style: solid;\n"
 " border-width:1px;\n"
@@ -213,12 +196,12 @@ public:
 " min-width:40px;\n"
 " min-height:40px;"));
 
-        gridLayout->addWidget(blueColorButton_2, 2, 1, 1, 1);
+        gridLayout->addWidget(yellowButton, 2, 1, 1, 1);
 
-        blueColorButton_3 = new QPushButton(layoutWidget);
-        blueColorButton_3->setObjectName(QString::fromUtf8("blueColorButton_3"));
-        blueColorButton_3->setStyleSheet(QString::fromUtf8("background-color: orange;\n"
-"border-color: black;\n"
+        orangeButton = new QPushButton(layoutWidget);
+        orangeButton->setObjectName(QString::fromUtf8("orangeButton"));
+        orangeButton->setStyleSheet(QString::fromUtf8("background-color: orange;\n"
+"border-color: orange;\n"
 " border-style: solid;\n"
 " border-width:1px;\n"
 " border-radius:20px;\n"
@@ -227,22 +210,22 @@ public:
 " min-width:40px;\n"
 " min-height:40px;"));
 
-        gridLayout->addWidget(blueColorButton_3, 2, 2, 1, 1);
+        gridLayout->addWidget(orangeButton, 2, 2, 1, 1);
 
-        widget = new QWidget(frame);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(30, 360, 188, 188));
-        gridLayout_2 = new QGridLayout(widget);
+        layoutWidget1 = new QWidget(frame);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(30, 400, 188, 188));
+        gridLayout_2 = new QGridLayout(layoutWidget1);
         gridLayout_2->setSpacing(6);
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         gridLayout_2->setContentsMargins(0, 0, 0, 0);
-        Emoji3 = new QPushButton(widget);
+        Emoji3 = new QPushButton(layoutWidget1);
         Emoji3->setObjectName(QString::fromUtf8("Emoji3"));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("Segoe UI Emoji"));
-        font1.setPointSize(15);
-        Emoji3->setFont(font1);
+        QFont font;
+        font.setFamily(QString::fromUtf8("Segoe UI Emoji"));
+        font.setPointSize(15);
+        Emoji3->setFont(font);
         Emoji3->setLayoutDirection(Qt::LeftToRight);
         Emoji3->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-color: white;\n"
@@ -256,9 +239,9 @@ public:
 
         gridLayout_2->addWidget(Emoji3, 2, 0, 1, 1);
 
-        Emoji7 = new QPushButton(widget);
+        Emoji7 = new QPushButton(layoutWidget1);
         Emoji7->setObjectName(QString::fromUtf8("Emoji7"));
-        Emoji7->setFont(font1);
+        Emoji7->setFont(font);
         Emoji7->setLayoutDirection(Qt::LeftToRight);
         Emoji7->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-color: white;\n"
@@ -272,12 +255,12 @@ public:
 
         gridLayout_2->addWidget(Emoji7, 0, 2, 1, 1);
 
-        Emoji9 = new QPushButton(widget);
+        Emoji9 = new QPushButton(layoutWidget1);
         Emoji9->setObjectName(QString::fromUtf8("Emoji9"));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Segoe UI Emoji"));
-        font2.setPointSize(16);
-        Emoji9->setFont(font2);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Segoe UI Emoji"));
+        font1.setPointSize(16);
+        Emoji9->setFont(font1);
         Emoji9->setLayoutDirection(Qt::LeftToRight);
         Emoji9->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-color: white;\n"
@@ -291,9 +274,9 @@ public:
 
         gridLayout_2->addWidget(Emoji9, 2, 2, 1, 1);
 
-        Emoji1 = new QPushButton(widget);
+        Emoji1 = new QPushButton(layoutWidget1);
         Emoji1->setObjectName(QString::fromUtf8("Emoji1"));
-        Emoji1->setFont(font1);
+        Emoji1->setFont(font);
         Emoji1->setLayoutDirection(Qt::LeftToRight);
         Emoji1->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-color: white;\n"
@@ -307,9 +290,9 @@ public:
 
         gridLayout_2->addWidget(Emoji1, 0, 0, 1, 1);
 
-        Emoji4 = new QPushButton(widget);
+        Emoji4 = new QPushButton(layoutWidget1);
         Emoji4->setObjectName(QString::fromUtf8("Emoji4"));
-        Emoji4->setFont(font1);
+        Emoji4->setFont(font);
         Emoji4->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-color: white;\n"
 " border-style: solid;\n"
@@ -322,9 +305,9 @@ public:
 
         gridLayout_2->addWidget(Emoji4, 0, 1, 1, 1);
 
-        Emoji2 = new QPushButton(widget);
+        Emoji2 = new QPushButton(layoutWidget1);
         Emoji2->setObjectName(QString::fromUtf8("Emoji2"));
-        Emoji2->setFont(font1);
+        Emoji2->setFont(font);
         Emoji2->setLayoutDirection(Qt::LeftToRight);
         Emoji2->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-color: white;\n"
@@ -338,9 +321,9 @@ public:
 
         gridLayout_2->addWidget(Emoji2, 1, 0, 1, 1);
 
-        Emoji5 = new QPushButton(widget);
+        Emoji5 = new QPushButton(layoutWidget1);
         Emoji5->setObjectName(QString::fromUtf8("Emoji5"));
-        Emoji5->setFont(font1);
+        Emoji5->setFont(font);
         Emoji5->setLayoutDirection(Qt::LeftToRight);
         Emoji5->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-color: white;\n"
@@ -354,9 +337,9 @@ public:
 
         gridLayout_2->addWidget(Emoji5, 1, 1, 1, 1);
 
-        Emoji6 = new QPushButton(widget);
+        Emoji6 = new QPushButton(layoutWidget1);
         Emoji6->setObjectName(QString::fromUtf8("Emoji6"));
-        Emoji6->setFont(font1);
+        Emoji6->setFont(font);
         Emoji6->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-color: white;\n"
 " border-style: solid;\n"
@@ -369,9 +352,9 @@ public:
 
         gridLayout_2->addWidget(Emoji6, 2, 1, 1, 1);
 
-        Emoji8 = new QPushButton(widget);
+        Emoji8 = new QPushButton(layoutWidget1);
         Emoji8->setObjectName(QString::fromUtf8("Emoji8"));
-        Emoji8->setFont(font1);
+        Emoji8->setFont(font);
         Emoji8->setStyleSheet(QString::fromUtf8("background-color: black;\n"
 "border-color: white;\n"
 " border-style: solid;\n"
@@ -384,6 +367,9 @@ public:
 
         gridLayout_2->addWidget(Emoji8, 1, 2, 1, 1);
 
+        mousePicture = new QLabel(frame);
+        mousePicture->setObjectName(QString::fromUtf8("mousePicture"));
+        mousePicture->setGeometry(QRect(26, 22, 201, 131));
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(10, 10, 821, 621));
@@ -412,26 +398,25 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QApplication::translate("MainWindow", "Options", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "Pen Size", nullptr));
-        redColorButton->setText(QApplication::translate("MainWindow", "Red", nullptr));
-        redColorButton_2->setText(QApplication::translate("MainWindow", "Cyan", nullptr));
-        redColorButton_3->setText(QApplication::translate("MainWindow", "Black", nullptr));
-        greenColorButton->setText(QApplication::translate("MainWindow", "Green", nullptr));
-        greenColorButton_2->setText(QApplication::translate("MainWindow", "Magenat", nullptr));
-        greenColorButton_3->setText(QApplication::translate("MainWindow", "Pink", nullptr));
-        blueColorButton->setText(QApplication::translate("MainWindow", "Blue", nullptr));
-        blueColorButton_2->setText(QApplication::translate("MainWindow", "Yellow", nullptr));
-        blueColorButton_3->setText(QApplication::translate("MainWindow", "Orange", nullptr));
+        redColorButton->setText(QString());
+        cyanButton->setText(QString());
+        blackButton->setText(QString());
+        greenColorButton->setText(QString());
+        magentaButton->setText(QString());
+        pinkButton->setText(QString());
+        blueColorButton->setText(QString());
+        yellowButton->setText(QString());
+        orangeButton->setText(QString());
         Emoji3->setText(QApplication::translate("MainWindow", "\360\237\230\203", nullptr));
         Emoji7->setText(QApplication::translate("MainWindow", "\360\237\244\251", nullptr));
         Emoji9->setText(QApplication::translate("MainWindow", "\342\235\204\357\270\217", nullptr));
         Emoji1->setText(QApplication::translate("MainWindow", "\360\237\230\216", nullptr));
         Emoji4->setText(QApplication::translate("MainWindow", "\360\237\230\212", nullptr));
-        Emoji2->setText(QApplication::translate("MainWindow", "\360\237\230\216", nullptr));
+        Emoji2->setText(QApplication::translate("MainWindow", "\360\237\230\241", nullptr));
         Emoji5->setText(QApplication::translate("MainWindow", "\360\237\230\203", nullptr));
         Emoji6->setText(QApplication::translate("MainWindow", "\360\237\230\215", nullptr));
         Emoji8->setText(QApplication::translate("MainWindow", "\360\237\230\212", nullptr));
+        mousePicture->setText(QString());
     } // retranslateUi
 
 };

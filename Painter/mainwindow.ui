@@ -14,6 +14,9 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">background-color:white;</string>
+   </property>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
@@ -29,45 +32,11 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>91</x>
-       <y>10</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Options</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="Line" name="line">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>40</y>
-       <width>241</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
     <widget class="QSlider" name="horizontalSlider">
      <property name="geometry">
       <rect>
-       <x>29</x>
-       <y>90</y>
+       <x>30</x>
+       <y>160</y>
        <width>181</width>
        <height>31</height>
       </rect>
@@ -82,26 +51,13 @@
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>70</y>
-       <width>52</width>
-       <height>15</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Pen Size</string>
-     </property>
-    </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>160</y>
-       <width>181</width>
-       <height>161</height>
+       <y>200</y>
+       <width>191</width>
+       <height>171</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
@@ -119,12 +75,12 @@
  min-height:40px;</string>
         </property>
         <property name="text">
-         <string>Red</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QPushButton" name="redColorButton_2">
+       <widget class="QPushButton" name="cyanButton">
         <property name="styleSheet">
          <string notr="true">background-color: cyan;
  border-style: solid;
@@ -137,12 +93,12 @@
  min-height:40px;</string>
         </property>
         <property name="text">
-         <string>Cyan</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="0" column="2">
-       <widget class="QPushButton" name="redColorButton_3">
+       <widget class="QPushButton" name="blackButton">
         <property name="styleSheet">
          <string notr="true">background-color: black;
  border-style: solid;
@@ -155,7 +111,7 @@
  min-height:40px;</string>
         </property>
         <property name="text">
-         <string>Black</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -173,12 +129,12 @@ border-color: green;
  min-height:40px;</string>
         </property>
         <property name="text">
-         <string>Green</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QPushButton" name="greenColorButton_2">
+       <widget class="QPushButton" name="magentaButton">
         <property name="styleSheet">
          <string notr="true">background-color: magenta;
 border-color: magenta;
@@ -191,15 +147,15 @@ border-color: magenta;
  min-height:40px;</string>
         </property>
         <property name="text">
-         <string>Magenat</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QPushButton" name="greenColorButton_3">
+       <widget class="QPushButton" name="pinkButton">
         <property name="styleSheet">
-         <string notr="true">background-color: pink;
-border-color: green;
+         <string notr="true">background-color: rgb(255,20,147);
+border-color: rgb(255,20,147);
  border-style: solid;
  border-width:1px;
  border-radius:20px;
@@ -209,7 +165,7 @@ border-color: green;
  min-height:40px;</string>
         </property>
         <property name="text">
-         <string>Pink</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -227,12 +183,12 @@ border-color: blue;
  min-height:40px;</string>
         </property>
         <property name="text">
-         <string>Blue</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QPushButton" name="blueColorButton_2">
+       <widget class="QPushButton" name="yellowButton">
         <property name="styleSheet">
          <string notr="true">background-color: yellow;
 border-color: yellow;
@@ -245,15 +201,15 @@ border-color: yellow;
  min-height:40px;</string>
         </property>
         <property name="text">
-         <string>Yellow</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QPushButton" name="blueColorButton_3">
+       <widget class="QPushButton" name="orangeButton">
         <property name="styleSheet">
          <string notr="true">background-color: orange;
-border-color: black;
+border-color: orange;
  border-style: solid;
  border-width:1px;
  border-radius:20px;
@@ -263,17 +219,17 @@ border-color: black;
  min-height:40px;</string>
         </property>
         <property name="text">
-         <string>Orange</string>
+         <string/>
         </property>
        </widget>
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>360</y>
+       <y>400</y>
        <width>188</width>
        <height>188</height>
       </rect>
@@ -434,7 +390,7 @@ border-color: white;
  min-height:40px;</string>
         </property>
         <property name="text">
-         <string>😎</string>
+         <string>😡</string>
         </property>
        </widget>
       </item>
@@ -514,6 +470,22 @@ border-color: white;
        </widget>
       </item>
      </layout>
+    </widget>
+    <widget class="QLabel" name="mousePicture">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>10</y>
+       <width>151</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0,0,0,0%);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
